@@ -40,7 +40,7 @@ namespace WpfApp1
                 }
                 else if (ComboBox1.SelectedIndex == 2)
                 {
-                    //TODO AYMERIC
+                    Output.Text = Io.VigenèreCipher(Input.Text,Key.Text);
                 }
             }
             catch (Exception exception)

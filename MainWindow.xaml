@@ -7,15 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FEFEE2">
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,327,0,0" VerticalAlignment="Top" Width="108" Height="34" Click="ButtonBase_OnClick" ClickMode="Press"/>
+        <Button Content="Translate" HorizontalAlignment="Center" Margin="0,327,0,0" VerticalAlignment="Top" Width="108" Height="34" Click="ButtonBase_OnClick" ClickMode="Press"/>
         <Label Content="Text en claire " HorizontalAlignment="Left" Margin="164,96,0,0" VerticalAlignment="Top" Height="23" Width="86" RenderTransformOrigin="0.402,0.532"/>
         <Label Content="Text crypté " HorizontalAlignment="Left" Margin="587,101,0,0" VerticalAlignment="Top" Height="23" Width="114" RenderTransformOrigin="0.479,2.909"/>
         <TextBox Name="Input" HorizontalAlignment="Left" Height="100" Margin="127,159,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="150">Input</TextBox>
         <TextBox Name="Output" HorizontalAlignment="Left" Height="100" Margin="569,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="150">Output</TextBox>
+        <TextBox Name="Key" HorizontalAlignment="Left" Height="100" Margin="127,300,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="150">Key (only with Vigenère Cipher)</TextBox>
+
         <ComboBox Name="ComboBox1" HorizontalAlignment="Left" Height="29" Margin="359,167,0,0" VerticalAlignment="Top" Width="118" SelectedIndex="0">
             <ComboBoxItem>Chiffrement par décalage</ComboBoxItem>
             <ComboBoxItem>Binaire</ComboBoxItem>
-            <ComboBoxItem>Algo 3</ComboBoxItem>
+            <ComboBoxItem>Vigenère Cipher</ComboBoxItem>
         </ComboBox>
 
     </Grid>
