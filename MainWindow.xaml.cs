@@ -28,7 +28,27 @@ namespace WpfApp1
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            Output.Text = Input.Text;
+            try
+            {
+                if (ComboBox1.SelectedIndex == 0)
+                {
+                    Output.Text = Io.Decalage(Input.Text);
+                }
+                else if (ComboBox1.SelectedIndex == 1)
+                {
+                    Output.Text = Io.Binary(Input.Text);
+                }
+                else if (ComboBox1.SelectedIndex == 2)
+                {
+                    //TODO AYMERIC
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("A handled exception just occurred: " + exception.Message, "Exception Sample", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            
+            
         }
         
     }
