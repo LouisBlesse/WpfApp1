@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Microsoft.VisualBasic.CompilerServices;
 
@@ -47,19 +48,14 @@ namespace WpfApp1
             var NewText= new List<char>();
             for (int i = 0; i < text.Length; i++)
             {
-                var ValLettre = alphabet.IndexOf(text[i]);//valeur de la lettre
-                Console.WriteLine(ValLettre +"valeur de la lettre");
-                
-                var ValInKey = key[ValLettre]; //lettre dans la clée
-                Console.WriteLine(ValInKey +"lettre dans la clée");
-                
-                var ValKeyInAlphabet = alphabet.IndexOf(ValInKey); //valeur dans la clée (dans l'alphabet)
-                Console.WriteLine(ValKeyInAlphabet +"valeur dans la clée (dans l'alphabet)");
-                
-                int ValFinale = (ValLettre + ValKeyInAlphabet) % 26;
+                int ValLettre = alphabet.IndexOf(text[i]);//valeur de la lettre
+
+                int ValInKey = alphabet.IndexOf(key[i]); //lettre dans la clée
+
+                int ValFinale = (ValLettre + ValInKey) % 26;
                 NewText.Add(alphabet[ValFinale]);
-                
             }
+
             string NewString = string.Join("", NewText.ToArray());
             return NewString;
         }
